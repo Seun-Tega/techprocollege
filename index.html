@@ -1,0 +1,2767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPro College of Technology | Melbourne RTO</title>
+    
+    <!-- Add Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Meta tags for SEO and Australian audience -->
+    <meta name="description" content="TechPro College of Technology - Leading vocational education in Melbourne offering Disability Support, Aged Care, AI and Community Services courses. RTO registration pending with ASQA.">
+    <meta name="keywords" content="Melbourne RTO, vocational education Australia, disability support training, aged care courses, artificial intelligence diploma, community services diploma, Australian training">
+    <meta name="author" content="TechPro College of Technology">
+    
+    <style>
+        :root {
+            --primary-red: #D32F2F;
+            --primary-blue: #0D47A1;
+            --accent-gold: #FFC107;
+            --accent-green: #388E3C;
+            --deep-blue: #0A2A5A;
+            --light-blue: #E3F2FD;
+            --light-red: #FFEBEE;
+            --light-gold: #FFF8E1;
+            --light-green: #E8F5E9;
+            --dark-gray: #263238;
+            --medium-gray: #546E7A;
+            --light-gray: #F5F7FA;
+            --white: #FFFFFF;
+            --gradient-primary: linear-gradient(135deg, #D32F2F 0%, #0D47A1 100%);
+            --gradient-blue: linear-gradient(135deg, #0D47A1 0%, #0A2A5A 100%);
+            --gradient-accent: linear-gradient(135deg, #FFC107 0%, #FF9800 100%);
+            --gradient-success: linear-gradient(135deg, #388E3C 0%, #2E7D32 100%);
+            --gradient-hero: linear-gradient(105deg, rgba(13, 71, 161, 0.85) 0%, rgba(10, 42, 90, 0.75) 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+            --shadow-xl: 0 16px 48px rgba(0,0,0,0.16);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 14px;
+            --radius-xl: 20px;
+            --radius-full: 9999px;
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-gray);
+            background-color: var(--white);
+            overflow-x: hidden;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.025em;
+        }
+        
+        h1 { 
+            font-size: 3.5rem; 
+            letter-spacing: -0.03em;
+        }
+        h2 { 
+            font-size: 2.8rem; 
+            letter-spacing: -0.02em;
+        }
+        h3 { 
+            font-size: 2.2rem; 
+        }
+        h4 { 
+            font-size: 1.8rem; 
+        }
+        
+        @media (max-width: 768px) {
+            h1 { 
+                font-size: 2.5rem; 
+                line-height: 1.1;
+            }
+            h2 { 
+                font-size: 2rem; 
+                line-height: 1.2;
+            }
+            h3 { 
+                font-size: 1.6rem; 
+            }
+            h4 { 
+                font-size: 1.4rem; 
+            }
+            body { 
+                font-size: 15px; 
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 { 
+                font-size: 2rem; 
+            }
+            h2 { 
+                font-size: 1.6rem; 
+            }
+            h3 { 
+                font-size: 1.3rem; 
+            }
+            body { 
+                font-size: 14px; 
+            }
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--medium-gray);
+            font-weight: 400;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            color: var(--deep-blue);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.75rem;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0.75rem auto 0;
+            color: var(--medium-gray);
+            font-weight: 400;
+        }
+        
+        /* Password Protection */
+        #passwordProtection {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-blue);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+        }
+        
+        .password-box {
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            color: var(--dark-gray);
+            box-shadow: var(--shadow-xl);
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .password-box h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .password-notice {
+            background-color: var(--light-gold);
+            border: 2px solid var(--accent-gold);
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            text-align: left;
+            color: var(--dark-gray);
+            font-weight: 500;
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+        }
+        
+        .password-input {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 2px solid #E2E8F0;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition-normal);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+        }
+        
+        .password-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2.25rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-normal);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.01em;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: var(--transition-normal);
+        }
+        
+        .btn:hover::after {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-secondary {
+            background: var(--gradient-accent);
+            color: var(--dark-gray);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-success {
+            background: var(--gradient-success);
+            color: var(--white);
+        }
+        
+        .btn-success:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        /* Top Notice Bar */
+        .top-notice {
+            background-color: var(--primary-red);
+            color: var(--white);
+            text-align: center;
+            padding: 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 32px;
+            z-index: 1000;
+            transition: var(--transition-normal);
+        }
+        
+        header.scrolled {
+            padding: 0;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            transition: var(--transition-normal);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+        
+        /* Logo Image - IMPORTANT: Add your logo to images/logo.png */
+        .logo-img {
+            height: 70px;
+            width: 160px;
+            background-image: url('images/logo.png'); /* Your logo goes here */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
+        /* Fallback if logo doesn't load */
+        .logo-img.fallback {
+            background: var(--gradient-primary);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: var(--primary-blue);
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+        
+        .logo-sub {
+            font-size: 0.85rem;
+            color: var(--medium-gray);
+            margin-top: 0.2rem;
+            font-weight: 500;
+        }
+        
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .main-nav {
+            display: flex;
+            list-style: none;
+            gap: 1.75rem;
+        }
+        
+        .main-nav a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition-fast);
+            position: relative;
+            padding: 0.5rem 0;
+            letter-spacing: 0.01em;
+        }
+        
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+            transition: var(--transition-normal);
+            border-radius: 2px;
+        }
+        
+        .main-nav a:hover {
+            color: var(--primary-red);
+        }
+        
+        .main-nav a:hover::after,
+        .main-nav a.active::after {
+            width: 100%;
+        }
+        
+        .main-nav a.active {
+            color: var(--primary-blue);
+        }
+        
+        .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-red);
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+            background: var(--light-red);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            transition: var(--transition-normal);
+            font-size: 0.95rem;
+        }
+        
+        .phone-number:hover {
+            background: var(--primary-red);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--radius-sm);
+            transition: var(--transition-normal);
+            z-index: 1002;
+        }
+        
+        .mobile-menu-btn:hover {
+            background: var(--light-blue);
+        }
+        
+        /* Hero Sections with Local Images */
+        .hero {
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 8rem 0 6rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-hero);
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.25rem;
+            color: var(--white);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1.25rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Australian Flag Accent */
+        .aus-accent {
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            background: linear-gradient(to right, #012169 0%, #012169 33%, white 33%, white 66%, #E4002B 66%, #E4002B 100%);
+            top: 20px;
+            right: 20px;
+            border-radius: 4px;
+            box-shadow: var(--shadow-md);
+            z-index: 2;
+        }
+        
+        /* Courses Section */
+        .courses-section {
+            background: var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .course-card {
+            background-color: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid var(--primary-red);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .course-card.animate {
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-top-color: var(--accent-gold);
+        }
+        
+        .course-img {
+            height: 200px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s ease;
+        }
+        
+        .course-card:hover .course-img {
+            transform: scale(1.05);
+        }
+        
+        .course-img::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+        }
+        
+        .course-code {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 0.375rem 0.75rem;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .course-content {
+            padding: 1.75rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .course-title {
+            font-size: 1.35rem;
+            color: var(--deep-blue);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+        
+        .course-desc {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+        
+        .course-link {
+            color: var(--primary-red);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition-fast);
+            font-size: 0.95rem;
+        }
+        
+        .course-link:hover {
+            color: var(--primary-blue);
+            gap: 0.75rem;
+        }
+        
+        /* Consultation Section */
+        .consultation-section {
+            background: var(--white);
+            position: relative;
+        }
+        
+        .consultation-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .consultation-content h2 {
+            font-size: 2.25rem;
+            color: var(--deep-blue);
+            margin-bottom: 1.25rem;
+        }
+        
+        .consultation-content p {
+            color: var(--medium-gray);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        .consultation-image {
+            height: 350px;
+            border-radius: var(--radius-xl);
+            background-size: cover;
+            background-position: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Course Details Page */
+        .course-details-page {
+            padding: 5rem 0;
+            background: var(--light-gray);
+        }
+        
+        .course-header {
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 7rem 0 4rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .course-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(13, 71, 161, 0.85), rgba(10, 42, 90, 0.85));
+        }
+        
+        .course-header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .course-code-badge {
+            display: inline-block;
+            background: var(--gradient-accent);
+            color: var(--dark-gray);
+            padding: 0.375rem 1.25rem;
+            border-radius: var(--radius-full);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--white);
+            background: rgba(255,255,255,0.15);
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            margin-bottom: 1.5rem;
+            transition: var(--transition-normal);
+            font-size: 0.95rem;
+        }
+        
+        .back-button:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateX(-5px);
+        }
+        
+        /* Detailed Course Sections */
+        .detailed-course {
+            padding: 4rem 0;
+            background: var(--light-gray);
+            border-top: 1px solid #E2E8F0;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        
+        .course-details-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-top: 2.5rem;
+        }
+        
+        .career-roles {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            margin-top: 2.5rem;
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--accent-gold);
+        }
+        
+        .career-roles h4 {
+            color: var(--primary-blue);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 0.75rem;
+        }
+        
+        .role-item {
+            background: var(--light-blue);
+            padding: 0.875rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            border-left: 3px solid var(--primary-red);
+            transition: var(--transition-fast);
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        
+        .role-item.animate {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+        
+        .role-item:hover {
+            transform: translateX(3px);
+            background: var(--primary-red);
+            color: var(--white);
+        }
+        
+        .units-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+        
+        .unit-item {
+            background: var(--white);
+            padding: 1rem 1.25rem;
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-sm);
+            border-top: 3px solid var(--primary-blue);
+            transition: var(--transition-fast);
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        
+        .unit-item.animate {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+        
+        .unit-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-top-color: var(--accent-green);
+        }
+        
+        .unit-code {
+            font-weight: 700;
+            color: var(--primary-red);
+            margin-bottom: 0.25rem;
+            font-size: 0.85rem;
+        }
+        
+        /* Page Content */
+        .page-content {
+            display: none;
+            animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .page-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.375rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #E2E8F0;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition-normal);
+            background-color: var(--white);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.375rem;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-weight: 500;
+            color: var(--medium-gray);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: var(--radius-sm);
+            transition: var(--transition-fast);
+            font-size: 0.9rem;
+        }
+        
+        .checkbox-label:hover {
+            background: var(--light-blue);
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            margin-top: 0.15rem;
+            accent-color: var(--primary-red);
+            width: 1rem;
+            height: 1rem;
+            flex-shrink: 0;
+        }
+        
+        select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23546E7A' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 16px;
+            padding-right: 2.5rem;
+        }
+        
+        /* Contact Page Styles */
+        .contact-info {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border-top: 4px solid var(--accent-green);
+        }
+        
+        .contact-detail {
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid #E2E8F0;
+        }
+        
+        .contact-detail:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .contact-detail i {
+            color: var(--primary-red);
+            font-size: 1.1rem;
+            margin-top: 0.15rem;
+            flex-shrink: 0;
+            width: 24px;
+        }
+        
+        .contact-detail strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            color: var(--deep-blue);
+            font-size: 0.95rem;
+        }
+        
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            border-top: 4px solid var(--accent-gold);
+        }
+        
+        /* About Page Styles */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.75rem;
+            margin-top: 2.5rem;
+        }
+        
+        .mission-box, .vision-box {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border-top: 4px solid var(--primary-red);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .mission-box.animate, .vision-box.animate {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .acknowledgement {
+            background: var(--light-green);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            margin: 2.5rem 0;
+            border-left: 4px solid var(--accent-green);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--gradient-blue);
+            color: var(--white);
+            padding-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .footer-main {
+            padding-bottom: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.15rem;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-col a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .footer-col a:hover {
+            color: var(--accent-gold);
+            transform: translateX(3px);
+        }
+        
+        .contact-info-footer {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .contact-info-footer p {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+        
+        .contact-info-footer i {
+            color: var(--accent-gold);
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+        
+        .footer-bottom {
+            background-color: rgba(0,0,0,0.2);
+            padding: 1.25rem 0;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background: var(--gradient-primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition-normal);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 99;
+            border: 2px solid white;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background: var(--primary-red);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        /* Australian Professional Touches */
+        .aus-certified {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--light-blue);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-top: 0.75rem;
+        }
+        
+        .melbourne-badge {
+            display: inline-block;
+            background: var(--gradient-accent);
+            color: var(--dark-gray);
+            padding: 0.375rem 0.875rem;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+        
+        /* Quality Assurance Section */
+        .quality-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1.75rem;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
+        }
+        
+        .quality-badge {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            min-width: 140px;
+            transition: var(--transition-normal);
+            flex: 1;
+            max-width: 220px;
+        }
+        
+        .quality-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .quality-badge i {
+            font-size: 2.25rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.75rem;
+        }
+        
+        .quality-badge h4 {
+            font-size: 0.95rem;
+            color: var(--deep-blue);
+            margin-bottom: 0.375rem;
+        }
+        
+        .quality-badge p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+        
+        /* Additional Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Page transition */
+        .page-transition {
+            animation: pageSlide 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes pageSlide {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        /* Image responsiveness */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .responsive-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        /* Responsive Styles - Enhanced Mobile Menu */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 1140px;
+                padding: 0 1.25rem;
+            }
+            
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2.3rem; }
+        }
+        
+        @media (max-width: 992px) {
+            .container {
+                max-width: 960px;
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 4rem 0;
+            }
+            
+            .consultation-container,
+            .course-details-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            
+            .consultation-image {
+                height: 280px;
+                order: -1;
+            }
+            
+            .hero {
+                padding: 6rem 0 4rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.15rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-container {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 5rem 1.5rem 2rem;
+                transition: var(--transition-normal);
+                box-shadow: var(--shadow-xl);
+                overflow-y: auto;
+                z-index: 1001;
+            }
+            
+            .nav-container.active {
+                right: 0;
+            }
+            
+            .main-nav {
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+            }
+            
+            .main-nav li {
+                width: 100%;
+                text-align: left;
+            }
+            
+            .main-nav a {
+                display: block;
+                padding: 0.875rem 0;
+                border-bottom: 1px solid #E2E8F0;
+                font-size: 1rem;
+            }
+            
+            .phone-number {
+                margin-top: 1.5rem;
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .hero {
+                padding: 5rem 0 3.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.05rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+            
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 2rem;
+            }
+            
+            .back-to-top {
+                bottom: 1rem;
+                right: 1rem;
+                width: 42px;
+                height: 42px;
+            }
+            
+            .aus-accent {
+                width: 40px;
+                height: 20px;
+                top: 15px;
+                right: 15px;
+            }
+            
+            .quality-badges {
+                gap: 1rem;
+            }
+            
+            .quality-badge {
+                min-width: calc(50% - 1rem);
+                max-width: none;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 2.5rem 0;
+            }
+            
+            .section-title {
+                margin-bottom: 2.5rem;
+            }
+            
+            .logo-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .logo-main {
+                font-size: 1.4rem;
+            }
+            
+            .logo-img {
+                height: 45px;
+                width: 110px;
+            }
+            
+            .password-box {
+                padding: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .course-card {
+                margin-bottom: 1rem;
+            }
+            
+            .units-grid,
+            .roles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form,
+            .contact-info,
+            .mission-box,
+            .vision-box {
+                padding: 1.5rem;
+            }
+            
+            .quality-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .quality-badge {
+                width: 100%;
+                max-width: 280px;
+                min-width: auto;
+            }
+            
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.6rem;
+            }
+            
+            .course-title {
+                font-size: 1.2rem;
+            }
+            
+            .hero-buttons .btn {
+                padding: 0.75rem 1.5rem;
+            }
+        }
+        
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Focus styles for accessibility */
+        *:focus {
+            outline: 3px solid var(--accent-gold);
+            outline-offset: 2px;
+        }
+        
+        *:focus:not(.focus-visible) {
+            outline: none;
+        }
+        
+        /* Animation for elements */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Enhanced hover effects */
+        .enhanced-hover {
+            transition: all var(--transition-normal);
+        }
+        
+        .enhanced-hover:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Subtle pulse animation */
+        @keyframes subtlePulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+        
+        .pulse {
+            animation: subtlePulse 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Password Protection Overlay -->
+    <div id="passwordProtection">
+        <div class="password-box">
+            <!-- Logo Display for Password Screen -->
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <!-- Your logo will show here from images/logo.png -->
+                <div class="logo-img" style="height: 70px; width: 180px; margin: 0 auto 1rem;"></div>
+            </div>
+            
+            <h3>Website Access</h3>
+            <p>This website is currently under development and password protected.</p>
+            
+            <div class="password-notice">
+                <strong>Important Notice:</strong><br>
+                TechPro College of Technology is currently applying for registration as an RTO with ASQA. All courses are nationally recognised upon registration.
+            </div>
+            
+            <p>Please enter the password to continue:</p>
+            <input type="password" class="password-input" id="passwordInput" placeholder="Enter password" aria-label="Enter password to access website">
+            <button class="btn btn-primary" onclick="checkPassword()">Access Website</button>
+            <p id="passwordError" style="color: var(--primary-red); margin-top: 1rem; display: none; font-weight: 500;">
+                <i class="fas fa-exclamation-circle"></i> Incorrect password. Please try again.
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--medium-gray);">
+                <em>Demo password: techpro2023</em>
+            </p>
+        </div>
+    </div>
+
+    <!-- Top Notice Bar -->
+    <div class="top-notice" role="alert" aria-live="assertive">
+        <strong>Important Notice:</strong> TechPro College of Technology is currently applying for registration as an RTO with ASQA. 
+        <span style="margin-left: 1rem;">|</span>
+        <span style="margin-left: 1rem;"><i class="fas fa-phone"></i> 0435 976 010</span>
+    </div>
+
+    <!-- Header with Logo -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <a href="#home" class="logo-container" onclick="navigateTo('home')">
+                <!-- Your Logo Here -->
+                <div class="logo-img" id="siteLogo"></div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-container" id="navContainer" aria-label="Main navigation">
+                <ul class="main-nav">
+                    <li><a href="#home" onclick="navigateTo('home')" class="active" aria-current="page">Home</a></li>
+                    <li><a href="#courses" onclick="navigateTo('courses')">Courses</a></li>
+                    <li><a href="#about" onclick="navigateTo('about')">About</a></li>
+                    <li><a href="#contact" onclick="navigateTo('contact')">Contact</a></li>
+                    <li><a href="#students" onclick="navigateTo('students')">Students</a></li>
+                </ul>
+                <a href="tel:0435976010" class="phone-number" aria-label="Call us at 0435 976 010">
+                    <i class="fas fa-phone"></i> 0435 976 010
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="mainContent" style="display: none;">
+        <!-- Home Page -->
+        <div id="homePage" class="page-content active">
+            <!-- Hero Section with Local Image -->
+            <section class="hero" id="home" style="background-image: url('images/hero-home.jpg');">
+                <div class="aus-accent"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="animate-on-scroll">Empowering Australian Skills.<br>Elevating Futures.</h1>
+                        <p class="animate-on-scroll">At TechPro College of Technology, we equip every learner with practical knowledge, confidence, and industry-ready skills to thrive in Australia's evolving job market.</p>
+                        <div class="hero-buttons">
+                            <a href="#courses" class="btn btn-primary enhanced-hover" onclick="navigateTo('courses')">
+                                <i class="fas fa-book-open"></i> Explore Our Courses
+                            </a>
+                            <a href="#contact" class="btn btn-secondary enhanced-hover" onclick="navigateTo('contact')">
+                                <i class="fas fa-calendar-check"></i> Book Free Consultation
+                            </a>
+                        </div>
+                        <div class="aus-certified animate-on-scroll pulse" style="margin-top: 2rem;">
+                            <i class="fas fa-award"></i>
+                            <span>Nationally Recognised Training | Melbourne Based</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quality Assurance -->
+            <section class="courses-section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2 class="animate-on-scroll">Why Choose TechPro College?</h2>
+                        <p class="animate-on-scroll">We're committed to delivering excellence in vocational education across Australia</p>
+                    </div>
+                    
+                    <div class="quality-badges">
+                        <div class="quality-badge animate-on-scroll enhanced-hover">
+                            <i class="fas fa-user-graduate floating"></i>
+                            <h4>Industry Experts</h4>
+                            <p>Learn from experienced Australian professionals</p>
+                        </div>
+                        <div class="quality-badge animate-on-scroll enhanced-hover">
+                            <i class="fas fa-laptop-house floating"></i>
+                            <h4>Flexible Learning</h4>
+                            <p>Study online from anywhere in Australia</p>
+                        </div>
+                        <div class="quality-badge animate-on-scroll enhanced-hover">
+                            <i class="fas fa-briefcase floating"></i>
+                            <h4>Career Focused</h4>
+                            <p>Practical skills for Australian workplaces</p>
+                        </div>
+                        <div class="quality-badge animate-on-scroll enhanced-hover">
+                            <i class="fas fa-hands-helping floating"></i>
+                            <h4>Student Support</h4>
+                            <p>Dedicated Australian support team</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Courses Preview Section -->
+            <section id="courses" class="courses-section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2 class="animate-on-scroll">Our Accredited Courses</h2>
+                        <p class="animate-on-scroll">Choose from our range of industry-relevant courses designed for Australia's job market</p>
+                    </div>
+                    
+                    <div class="courses-grid">
+                        <!-- Course 1 -->
+                        <div class="course-card animate-on-scroll">
+                            <div class="course-img" style="background-image: url('images/course-disability.jpg');">
+                                <span class="course-code">CHC33021</span>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">Certificate III in Individual Support (Disability)</h3>
+                                <p class="course-desc">Develop skills to provide person-centered support to people with disabilities in Australian care settings.</p>
+                                <a href="#course-details" class="course-link" onclick="showCoursePage('disability')">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <div class="aus-certified">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Melbourne & Online</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Course 2 -->
+                        <div class="course-card animate-on-scroll">
+                            <div class="course-img" style="background-image: url('images/course-aged-care.jpg');">
+                                <span class="course-code">CHC33021</span>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">Certificate III in Individual Support (Ageing)</h3>
+                                <p class="course-desc">Gain skills to provide quality care and support to elderly clients in Australian residential and community settings.</p>
+                                <a href="#course-details" class="course-link" onclick="showCoursePage('ageing')">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <div class="aus-certified">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Melbourne & Online</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Course 3 -->
+                        <div class="course-card animate-on-scroll">
+                            <div class="course-img" style="background-image: url('images/course-ai.jpg');">
+                                <span class="course-code">11287NAT</span>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">Diploma of Artificial Intelligence (AI)</h3>
+                                <p class="course-desc">Master practical AI skills for Australian business applications, content creation, data analysis, and customer experience.</p>
+                                <a href="#course-details" class="course-link" onclick="showCoursePage('ai')">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <div class="aus-certified">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Australia Wide Online</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Course 4 -->
+                        <div class="course-card animate-on-scroll">
+                            <div class="course-img" style="background-image: url('images/course-community.jpg');">
+                                <span class="course-code">CHC52021</span>
+                            </div>
+                            <div class="course-content">
+                                <h3 class="course-title">Diploma of Community Services</h3>
+                                <p class="course-desc">Develop advanced skills to support individuals, families, and communities across Australian human services settings.</p>
+                                <a href="#course-details" class="course-link" onclick="showCoursePage('community')">
+                                    Learn More <i class="fas fa-arrow-right"></i>
+                                </a>
+                                <div class="aus-certified">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Melbourne & Online</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Consultation Section -->
+            <section id="consultation" class="consultation-section">
+                <div class="container">
+                    <div class="consultation-container">
+                        <div class="consultation-content animate-on-scroll">
+                            <h2>Need guidance for your Australian career path?</h2>
+                            <p>Book a personalised 1:1 consultation with our Melbourne-based Student Support Team. Get tailored advice for your study and career goals in Australia.</p>
+                            <a href="#contact-form" class="btn btn-primary enhanced-hover" onclick="navigateTo('contact')">
+                                <i class="fas fa-calendar-alt"></i> Book Free Consultation
+                            </a>
+                            <div class="aus-certified pulse" style="margin-top: 1.5rem;">
+                                <i class="fas fa-clock"></i>
+                                <span>Available Weekdays 9am-6pm AEST</span>
+                            </div>
+                        </div>
+                        <div class="consultation-image animate-on-scroll floating" style="background-image: url('images/consultation.jpg');" 
+                             aria-label="Student consultation session"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- AI Course Page -->
+        <div id="aiCoursePage" class="page-content">
+            <section class="course-header" style="background-image: url('images/course-ai.jpg');">
+                <div class="aus-accent"></div>
+                <div class="container">
+                    <a href="#courses" class="back-button enhanced-hover" onclick="navigateTo('courses')">
+                        <i class="fas fa-arrow-left"></i> Back to Courses
+                    </a>
+                    <div class="course-header-content">
+                        <span class="course-code-badge pulse">11287NAT</span>
+                        <h1 class="animate-on-scroll">Diploma of Artificial Intelligence (AI)</h1>
+                        <p class="animate-on-scroll">Master practical AI skills for Australian business applications, content creation, data analysis, and customer experience enhancement.</p>
+                        <div class="aus-certified animate-on-scroll pulse" style="margin-top: 1rem;">
+                            <i class="fas fa-award"></i>
+                            <span>Nationally Recognised | Online Delivery Australia Wide</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="course-details-page">
+                <div class="container">
+                    <div class="about-content">
+                        <h2 class="animate-on-scroll">Course Overview</h2>
+                        <p class="animate-on-scroll">The Diploma of Artificial Intelligence equips learners with the practical, applied skills needed to work confidently with AI tools, data-driven decision-making, and emerging digital technologies. The qualification focuses on real-world use cases, preparing students to apply AI across marketing, business operations, customer experience, content creation, and data analytics. The qualification is suitable for individuals seeking entry-level AI careers or existing professionals upskilling to work with AI systems and digital tools.</p>
+                        
+                        <div class="course-details-container">
+                            <div class="animate-on-scroll">
+                                <h3>Core Units</h3>
+                                <div class="units-grid">
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">NAT11287001</div>
+                                        <div>Apply Prompt Engineering for Generative Artificial Intelligence</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">NAT11287002</div>
+                                        <div>Use Artificial Intelligence Technologies to Produce Engaging Content</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">NAT11287003</div>
+                                        <div>Analyse Data and Make Forecasts Using Artificial Intelligence</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">NAT11287004</div>
+                                        <div>Optimise a Brand's Digital Presence Using Artificial Intelligence</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">NAT11287005</div>
+                                        <div>Use Artificial Intelligence Technologies to Enhance Business Operations</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">NAT11287006</div>
+                                        <div>Apply Artificial Intelligence Technologies to Enhance Customer Experience</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">NAT11287007</div>
+                                        <div>Apply Critical Thinking and Artificial Intelligence Ethics</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="animate-on-scroll">
+                                <h3>Elective Units</h3>
+                                <div class="units-grid">
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">ICTAII401</div>
+                                        <div>Identify Opportunities to Apply Artificial Intelligence, Machine Learning and Deep Learning</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="career-roles">
+                                    <h4><i class="fas fa-briefcase"></i> Career Opportunities in Australia</h4>
+                                    <p>Graduates may find employment in roles such as:</p>
+                                    <div class="roles-grid">
+                                        <div class="role-item animate-on-scroll">AI Support Officer / AI Assistant</div>
+                                        <div class="role-item animate-on-scroll">AI Operations Support Technician</div>
+                                        <div class="role-item animate-on-scroll">AI Digital Content Specialist</div>
+                                        <div class="role-item animate-on-scroll">Prompt Engineer (Junior Level)</div>
+                                        <div class="role-item animate-on-scroll">AI Marketing Assistant / Digital Marketing Analyst</div>
+                                        <div class="role-item animate-on-scroll">AI Customer Experience Coordinator</div>
+                                        <div class="role-item animate-on-scroll">Business Analyst (AI-enabled workflows)</div>
+                                        <div class="role-item animate-on-scroll">Data Insights Assistant / Data Technician</div>
+                                        <div class="role-item animate-on-scroll">Automation Support Officer</div>
+                                        <div class="role-item animate-on-scroll">AI Solutions Assistant in tech teams or start-ups</div>
+                                        <div class="role-item animate-on-scroll">Digital Transformation Support Officer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 3rem;" class="animate-on-scroll">
+                            <a href="#contact-form" class="btn btn-success enhanced-hover" onclick="navigateTo('contact')">
+                                <i class="fas fa-info-circle"></i> Enquire About This Course
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Community Services Course Page -->
+        <div id="communityCoursePage" class="page-content">
+            <section class="course-header" style="background-image: url('images/course-community.jpg');">
+                <div class="aus-accent"></div>
+                <div class="container">
+                    <a href="#courses" class="back-button enhanced-hover" onclick="navigateTo('courses')">
+                        <i class="fas fa-arrow-left"></i> Back to Courses
+                    </a>
+                    <div class="course-header-content">
+                        <span class="course-code-badge pulse">CHC52021</span>
+                        <h1 class="animate-on-scroll">Diploma of Community Services</h1>
+                        <p class="animate-on-scroll">Develop advanced skills to support individuals, families, and communities across Australian human services settings.</p>
+                        <div class="aus-certified animate-on-scroll pulse" style="margin-top: 1rem;">
+                            <i class="fas fa-award"></i>
+                            <span>Nationally Recognised | Melbourne & Online Delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="course-details-page">
+                <div class="container">
+                    <div class="about-content">
+                        <h2 class="animate-on-scroll">Course Overview</h2>
+                        <p class="animate-on-scroll">Graduates of the Diploma of Community Services develop the advanced skills and practical capability required to support individuals, families, and communities across a wide range of human services settings. The qualification equips learners with the ability to provide client-centred care, manage complex cases, develop service programs, and respond to crisis situations with professionalism and cultural sensitivity. Graduates may work in government, non-profit organisations, community agencies, residential services, outreach programs, and private support organisations.</p>
+                        
+                        <div class="course-details-container">
+                            <div class="animate-on-scroll">
+                                <h3>Core Units (12 units mandatory)</h3>
+                                <div class="units-grid">
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">CHCLEG003</div>
+                                        <div>Manage legal and ethical compliance</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">CHCMGT005</div>
+                                        <div>Facilitate workplace debriefing and support processes</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">CHCPRP003</div>
+                                        <div>Reflect on and improve own professional practice</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">HLTWHS003</div>
+                                        <div>Maintain work health and safety</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="animate-on-scroll">
+                                <h3>Elective Units (8 units)</h3>
+                                <div class="units-grid">
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">CHCCOM003</div>
+                                        <div>Develop workplace communication strategies</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">CHCPRP001</div>
+                                        <div>Develop and maintain networks and collaborative partnerships</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">CHCADV002</div>
+                                        <div>Provide advocacy and representation services</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">CHCDIS017</div>
+                                        <div>Facilitate community participation and social inclusion</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">CHCCDE027</div>
+                                        <div>Implement community development strategies</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">CHCMHS001</div>
+                                        <div>Work with people with mental health issues</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">CHCDEV004</div>
+                                        <div>Confirm developmental status</div>
+                                    </div>
+                                    <div class="unit-item animate-on-scroll">
+                                        <div class="unit-code">CHCMGT003</div>
+                                        <div>Lead the work team</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="career-roles">
+                                    <h4><i class="fas fa-briefcase"></i> Career Opportunities in Australia</h4>
+                                    <p>Possible job titles include:</p>
+                                    <div class="roles-grid">
+                                        <div class="role-item animate-on-scroll">Community Services Worker</div>
+                                        <div class="role-item animate-on-scroll">Case Manager / Case Coordinator</div>
+                                        <div class="role-item animate-on-scroll">Community Support Worker</div>
+                                        <div class="role-item animate-on-scroll">Client Services Officer</div>
+                                        <div class="role-item animate-on-scroll">Support Facilitator / Service Coordinator</div>
+                                        <div class="role-item animate-on-scroll">Family Support Worker</div>
+                                        <div class="role-item animate-on-scroll">Housing Support Worker</div>
+                                        <div class="role-item animate-on-scroll">Youth Worker (where electives align)</div>
+                                        <div class="role-item animate-on-scroll">Community Development Officer</div>
+                                        <div class="role-item animate-on-scroll">Domestic and Family Violence Support Worker</div>
+                                        <div class="role-item animate-on-scroll">Disability Services Team Leader</div>
+                                        <div class="role-item animate-on-scroll">Program Facilitator or Outreach Officer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 3rem;" class="animate-on-scroll">
+                            <a href="#contact-form" class="btn btn-success enhanced-hover" onclick="navigateTo('contact')">
+                                <i class="fas fa-info-circle"></i> Enquire About This Course
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div id="aboutPage" class="page-content">
+            <section class="hero" id="about" style="background-image: url('images/about-hero.jpg');">
+                <div class="aus-accent"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="animate-on-scroll">About TechPro College</h1>
+                        <p class="animate-on-scroll">Transforming Australian lives through quality education and innovative learning</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2 class="animate-on-scroll">Our Story & Vision</h2>
+                        <p class="animate-on-scroll">Learn about our journey, mission, and commitment to excellence in Australian education</p>
+                    </div>
+                    
+                    <div class="about-content">
+                        <div style="margin-bottom: 2.5rem;" class="animate-on-scroll">
+                            <h3>Welcome to TechPro College of Technology</h3>
+                            <p>TechPro College of Technology is a forward-thinking Registered Training Organisation (RTO) based in Melbourne, dedicated to delivering high-quality vocational education with a specialised focus on healthcare and emerging technologies. Our mission is to equip learners with practical, industry-relevant skills that open doors to meaningful careers and long-term growth.</p>
+                            <p>TechPro College operates nationally through our online learning platform, making our programs accessible to students across Australia. Whether you are beginning your career, upskilling for new opportunities, or transitioning into a high-demand industry, our flexible delivery model ensures you can learn anywhere, anytime.</p>
+                        </div>
+                        
+                        <div class="acknowledgement animate-on-scroll">
+                            <h3><i class="fas fa-landmark"></i> Acknowledgement of Country</h3>
+                            <p>At TechPro College of Technology, we respectfully acknowledge the Traditional Owners of the lands on which we live, learn, and work. We pay our respects to Elders past and present and recognise their enduring connection to culture, community, and country. We remain committed to fostering an inclusive learning environment that honours Indigenous knowledge, values, and contribution.</p>
+                        </div>
+                        
+                        <div style="margin: 2.5rem 0;" class="animate-on-scroll">
+                            <h3>Our Journey</h3>
+                            <p>TechPro College of Technology was founded on a personal journey of growth, resilience, and purpose. Our founder began his career as a disability support worker, providing hands-on support to some of the most vulnerable members of the community. It was in this role that he developed a deep appreciation for compassion, dignity, and the life-changing impact of quality care.</p>
+                            <p>With time, his career expanded into the technology sector, where he gained experience in digital transformation, AI, and business systems across large Australian organisations. This combination of frontline care experience and advanced technical capability created a unique perspective—one that blends humanity with innovation.</p>
+                            <p>Along the way, he also developed significant experience within the Vocational Education and Training (VET) sector, contributing to training, compliance, curriculum development, and student support. This experience shaped his vision for a modern RTO: one that delivers practical skills, embraces new technology, and prepares learners for the real world. TechPro College of Technology was built on that vision.</p>
+                        </div>
+                        
+                        <div class="mission-vision">
+                            <div class="mission-box animate-on-scroll">
+                                <h3><i class="fas fa-bullseye" style="color: var(--primary-red);"></i> Our Mission</h3>
+                                <p>At TechPro College of Technology, our mission is to empower individuals and organisations through transformative, technology-driven education. We are dedicated to delivering practical, future-focused training that bridges the gap between industry needs and workforce capability.</p>
+                                <p>We aim to lead at the forefront of digital transformation and vocational excellence, combining innovative teaching methods with real-world experience to develop confident, skilled, and job-ready graduates.</p>
+                                <p>Our commitment is to foster a culture of continuous learning, inclusivity, and professional growth, where every learner is supported to reach their full potential and contribute meaningfully to their community and industry.</p>
+                            </div>
+                            
+                            <div class="vision-box animate-on-scroll">
+                                <h3><i class="fas fa-eye" style="color: var(--primary-blue);"></i> Our Vision</h3>
+                                <p>At TechPro College of Technology, our vision is to become a leading force in vocational and technology education, recognised nationwide for producing skilled, innovative, and industry-ready professionals.</p>
+                                <p>We aspire to elevate the standard of training delivery in Australia, positioning TechPro Institute as the preferred choice for learners, trainers, and employers seeking excellence in education and professional development.</p>
+                                <p>By combining cutting-edge technology, expert instruction, and a commitment to continuous improvement, we aim to shape the future of learning—where education is practical, engaging, and transformative for individuals and industries alike.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contactPage" class="page-content">
+            <section class="hero" id="contact" style="background-image: url('images/contact-hero.jpg');">
+                <div class="aus-accent"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="animate-on-scroll">Contact Us</h1>
+                        <p class="animate-on-scroll">Get in touch with our Melbourne-based Student Support Team for personalized guidance</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="consultation-section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2 class="animate-on-scroll">Register for an Information Session</h2>
+                        <p class="animate-on-scroll">Our Information Sessions provide an ideal opportunity to ask questions and gather information about courses, fee structure, and eligibility criteria</p>
+                    </div>
+                    
+                    <div class="consultation-container">
+                        <div class="contact-info">
+                            <h3>Contact Information</h3>
+                            <div class="contact-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <strong>Main Office</strong><br>
+                                    1 Renga Place, Mambourin<br>
+                                    Vic, 3024, Australia
+                                </div>
+                            </div>
+                            <div class="contact-detail">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <strong>Phone</strong><br>
+                                    0435 976 010
+                                </div>
+                            </div>
+                            <div class="contact-detail">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <strong>Email</strong><br>
+                                    contact@techprocollege.com.au
+                                </div>
+                            </div>
+                            <div class="contact-detail">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Business Hours (AEST)</strong><br>
+                                    Mon - Fri: 9am - 6pm<br>
+                                    <small>Business hours can vary</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form" id="contact-form">
+                            <h3>Submit Expression of Interest</h3>
+                            <p>Select course(s) of interest - multiple course selection possible.</p>
+                            
+                            <form id="interestForm" onsubmit="submitForm(event)">
+                                <div class="form-group">
+                                    <label>Courses of Interest:</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="course" value="disability">
+                                            CHC33021 – Certificate III in Individual Support (Disability)
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="course" value="ageing">
+                                            CHC33021 – Certificate III in Individual Support (Ageing)
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="course" value="ai">
+                                            11287NAT – Diploma of Artificial Intelligence (AI)
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" name="course" value="community">
+                                            CHC52021 – Diploma of Community Services
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="firstName">First Name (required)</label>
+                                    <input type="text" id="firstName" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName">Last Name (required)</label>
+                                    <input type="text" id="lastName" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="suburb">Suburb (required)</label>
+                                    <input type="text" id="suburb" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="mobile">Mobile No (required)</label>
+                                    <input type="tel" id="mobile" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Your Email (required)</label>
+                                    <input type="email" id="email" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="emergencyContact">Emergency Contact No: (required)</label>
+                                    <input type="tel" id="emergencyContact" class="form-control" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="visaStatus">Visa Status</label>
+                                    <select id="visaStatus" class="form-control">
+                                        <option value="">Select Visa Status</option>
+                                        <option value="student">Student</option>
+                                        <option value="other">Others</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="qualification">Highest Qualification</label>
+                                    <input type="text" id="qualification" class="form-control">
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary enhanced-hover" style="width: 100%;">
+                                    <i class="fas fa-paper-plane"></i> Submit Expression of Interest
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- For Students Page -->
+        <div id="studentsPage" class="page-content">
+            <section class="hero" id="students" style="background-image: url('images/students-hero.jpg');">
+                <div class="aus-accent"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="animate-on-scroll">Student Resources</h1>
+                        <p class="animate-on-scroll">Resources and support for your Australian educational journey</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-section">
+                <div class="container">
+                    <div class="section-title">
+                        <h2 class="animate-on-scroll">Student Resources</h2>
+                        <p class="animate-on-scroll">Everything you need for a successful learning experience in Australia</p>
+                    </div>
+                    
+                    <div class="about-content">
+                        <div class="mission-vision">
+                            <div class="mission-box animate-on-scroll">
+                                <h3><i class="fas fa-user-plus" style="color: var(--primary-red);"></i> Student Portal</h3>
+                                <p>Access your student portal to manage your courses, submit assignments, and track your progress.</p>
+                                <a href="#" class="btn btn-primary enhanced-hover" style="margin-top: 1rem;">
+                                    <i class="fas fa-sign-in-alt"></i> Register / Login
+                                </a>
+                            </div>
+                            
+                            <div class="vision-box animate-on-scroll">
+                                <h3><i class="fas fa-file-alt" style="color: var(--primary-blue);"></i> Quality Assurance</h3>
+                                <p>Review our ASQA Audit Report and compliance documentation.</p>
+                                <a href="#" class="btn btn-primary enhanced-hover" style="margin-top: 1rem;">
+                                    <i class="fas fa-chart-line"></i> ASQA Audit Report
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div style="margin: 2.5rem 0;" class="animate-on-scroll">
+                            <h3>Resources and Policies</h3>
+                            <p>Access important documents and policies that govern your study experience:</p>
+                            
+                            <div class="units-grid" style="margin-top: 1.25rem;">
+                                <div class="unit-item animate-on-scroll">
+                                    <div class="unit-code">Policies</div>
+                                    <div>Course Cancellation and Refund Policy</div>
+                                </div>
+                                <div class="unit-item animate-on-scroll">
+                                    <div class="unit-code">Policies</div>
+                                    <div>Online Service Standard Policy</div>
+                                </div>
+                                <div class="unit-item animate-on-scroll">
+                                    <div class="unit-code">Policies</div>
+                                    <div>National Recognition, RPL Policy</div>
+                                </div>
+                                <div class="unit-item animate-on-scroll">
+                                    <div class="unit-code">Policies</div>
+                                    <div>Privacy Policy</div>
+                                </div>
+                                <div class="unit-item animate-on-scroll">
+                                    <div class="unit-code">Policies</div>
+                                    <div>Student Support Policy</div>
+                                </div>
+                                <div class="unit-item animate-on-scroll">
+                                    <div class="unit-code">Policies</div>
+                                    <div>Training and Assessment Policy</div>
+                                </div>
+                                <div class="unit-item animate-on-scroll">
+                                    <div class="unit-code">Resources</div>
+                                    <div>Student Handbook</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin: 2.5rem 0;" class="animate-on-scroll">
+                            <h3>Useful Links for Australian Students</h3>
+                            <div class="units-grid" style="margin-top: 1.25rem;">
+                                <div class="unit-item animate-on-scroll">
+                                    <a href="https://portal.usi.gov.au/student/TermsAndConditions?ReturnUrl=%252fstudent%252fUsi%252fForgotten%252fSuccess" target="_blank" style="text-decoration: none; color: inherit;">
+                                        <div class="unit-code">External</div>
+                                        <div>USI Information (Unique Student Identifier)</div>
+                                    </a>
+                                </div>
+                                <div class="unit-item animate-on-scroll">
+                                    <a href="https://www.asqa.gov.au" target="_blank" style="text-decoration: none; color: inherit;">
+                                        <div class="unit-code">External</div>
+                                        <div>ASQA - Australian Skills Quality Authority</div>
+                                    </a>
+                                </div>
+                                <div class="unit-item animate-on-scroll">
+                                    <a href="https://www.legislation.gov.au/C2011A00012/latest/text" target="_blank" style="text-decoration: none; color: inherit;">
+                                        <div class="unit-code">External</div>
+                                        <div>National Vocational Education and Training Regulator Act 2011</div>
+                                    </a>
+                                </div>
+                                <div class="unit-item animate-on-scroll">
+                                    <a href="https://www.dewr.gov.au/standards-for-rtos" target="_blank" style="text-decoration: none; color: inherit;">
+                                        <div class="unit-code">External</div>
+                                        <div>Standard for RTOs 2015</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="acknowledgement animate-on-scroll" style="margin-top: 2rem;">
+                            <h3><i class="fas fa-comments"></i> Feedback and Complaints</h3>
+                            <p>TechPro College of Technology is committed to providing a positive learning experience. Your comments help us improve our services and address issues quickly and fairly.</p>
+                            <p>Please use our feedback form to submit a complaint, concern, suggestion, or general feedback. Once submitted, our Student Support Team will acknowledge your submission within 5 business days.</p>
+                            <a href="#" class="btn btn-success enhanced-hover" style="margin-top: 1rem;">
+                                <i class="fas fa-comment-dots"></i> Submit Feedback Form
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-grid">
+                    <!-- Column 1 -->
+                    <div class="footer-col">
+                        <h4>TechPro College</h4>
+                        <p style="margin-bottom: 1.25rem;">Empowering Australian Skills. Elevating Futures.</p>
+                        <div class="contact-info-footer">
+                            <p><i class="fas fa-map-marker-alt"></i> 1 Renga Place, Mambourin, Vic, 3024</p>
+                            <p><i class="fas fa-phone"></i> 0435 976 010</p>
+                            <p><i class="fas fa-envelope"></i> contact@techprocollege.com.au</p>
+                            <p><i class="fas fa-clock"></i> Mon - Fri: 9am - 6pm AEST</p>
+                            <p><i class="fas fa-globe-asia"></i> Serving Students Australia Wide</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Column 2 -->
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home" onclick="navigateTo('home')"><i class="fas fa-home"></i> Home</a></li>
+                            <li><a href="#courses" onclick="navigateTo('courses')"><i class="fas fa-book"></i> Courses</a></li>
+                            <li><a href="#about" onclick="navigateTo('about')"><i class="fas fa-info-circle"></i> About Us</a></li>
+                            <li><a href="#contact" onclick="navigateTo('contact')"><i class="fas fa-envelope"></i> Contact</a></li>
+                            <li><a href="#students" onclick="navigateTo('students')"><i class="fas fa-user-graduate"></i> Students</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 3 -->
+                    <div class="footer-col">
+                        <h4>Our Courses</h4>
+                        <ul>
+                            <li><a href="#course-details" onclick="showCoursePage('disability')"><i class="fas fa-handshake"></i> Disability Support</a></li>
+                            <li><a href="#course-details" onclick="showCoursePage('ageing')"><i class="fas fa-user-friends"></i> Aged Care</a></li>
+                            <li><a href="#course-details" onclick="showCoursePage('ai')"><i class="fas fa-robot"></i> Artificial Intelligence</a></li>
+                            <li><a href="#course-details" onclick="showCoursePage('community')"><i class="fas fa-hands-helping"></i> Community Services</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Column 4 -->
+                    <div class="footer-col">
+                        <h4>Australian Resources</h4>
+                        <ul>
+                            <li><a href="https://www.asqa.gov.au" target="_blank"><i class="fas fa-shield-alt"></i> ASQA</a></li>
+                            <li><a href="https://www.myskills.gov.au" target="_blank"><i class="fas fa-graduation-cap"></i> MySkills</a></li>
+                            <li><a href="https://www.studyinaustralia.gov.au" target="_blank"><i class="fas fa-university"></i> Study Australia</a></li>
+                            <li><a href="https://www.servicesaustralia.gov.au" target="_blank"><i class="fas fa-hands-helping"></i> Services Australia</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 TechPro College of Technology. All rights reserved. Melbourne, Australia.</p>
+                <p style="margin-top: 0.5rem;"><em>TechPro College of Technology is currently applying for registration as an RTO with ASQA. CRICOS Provider Code: Pending</em></p>
+                <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+                    <a href="#students" onclick="navigateTo('students')" style="color: rgba(255,255,255,0.7); margin-right: 1rem;">Privacy Policy</a>
+                    <a href="#students" onclick="navigateTo('students')" style="color: rgba(255,255,255,0.7); margin-right: 1rem;">Terms of Service</a>
+                    <a href="#students" onclick="navigateTo('students')" style="color: rgba(255,255,255,0.7);">Complaints Procedure</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script>
+        // Password Protection
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            const errorElement = document.getElementById('passwordError');
+            
+            // Password: techpro2023
+            if (password === "techpro2023") {
+                document.getElementById('passwordProtection').style.display = 'none';
+                document.getElementById('mainContent').style.display = 'block';
+                document.body.style.overflow = 'auto';
+                document.body.classList.add('password-entered');
+                
+                // Trigger animations after password is entered
+                setTimeout(() => {
+                    animateOnScroll();
+                    
+                    // Animate course cards
+                    document.querySelectorAll('.course-card').forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add('animate');
+                        }, index * 150);
+                    });
+                }, 100);
+            } else {
+                errorElement.style.display = 'block';
+                document.getElementById('passwordInput').style.animation = 'shake 0.5s ease';
+                setTimeout(() => {
+                    document.getElementById('passwordInput').style.animation = '';
+                }, 500);
+            }
+        }
+        
+        // Add shake animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                20%, 40%, 60%, 80% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Allow pressing Enter in password field
+        document.getElementById('passwordInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
+        
+        // Initially hide content until password is entered
+        document.body.style.overflow = 'hidden';
+        
+        // Enhanced Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navContainer = document.getElementById('navContainer');
+        
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+            navContainer.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navContainer.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+            
+            // Toggle body scroll when menu is open
+            if (navContainer.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-container a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navContainer.classList.remove('active');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navContainer.contains(event.target);
+            const isClickOnMenuBtn = mobileMenuBtn.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnMenuBtn && navContainer.classList.contains('active')) {
+                navContainer.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Navigation between main pages
+        function navigateTo(page) {
+            // Hide all pages
+            document.querySelectorAll('.page-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Show the selected page
+            document.getElementById(page + 'Page').classList.add('active');
+            
+            // Update active navigation
+            document.querySelectorAll('.main-nav a').forEach(link => {
+                link.classList.remove('active');
+                link.removeAttribute('aria-current');
+            });
+            
+            const activeLink = document.querySelector(`.main-nav a[href="#${page}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+                activeLink.setAttribute('aria-current', 'page');
+            }
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 768) {
+                navContainer.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Trigger animations for new page
+            setTimeout(() => {
+                animateOnScroll();
+                
+                // Animate items on the page
+                if (page === 'courses' || page === 'home') {
+                    document.querySelectorAll('.course-card').forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add('animate');
+                        }, index * 150);
+                    });
+                }
+                
+                if (page === 'about') {
+                    document.querySelectorAll('.mission-box, .vision-box').forEach((box, index) => {
+                        setTimeout(() => {
+                            box.classList.add('animate');
+                        }, index * 150);
+                    });
+                }
+            }, 100);
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Show course detail page
+        function showCoursePage(course) {
+            document.querySelectorAll('.page-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            if (course === 'ai') {
+                document.getElementById('aiCoursePage').classList.add('active');
+            } else if (course === 'community') {
+                document.getElementById('communityCoursePage').classList.add('active');
+            } else if (course === 'disability' || course === 'ageing') {
+                alert('Course details page for this course is under development. For now, please contact us for more information.');
+                navigateTo('contact');
+                return;
+            }
+            
+            // Update navigation
+            document.querySelectorAll('.main-nav a').forEach(link => {
+                link.classList.remove('active');
+                link.removeAttribute('aria-current');
+            });
+            
+            const coursesLink = document.querySelector('.main-nav a[href="#courses"]');
+            if (coursesLink) {
+                coursesLink.classList.add('active');
+            }
+            
+            // Close mobile menu if open
+            if (window.innerWidth <= 768) {
+                navContainer.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Trigger animations
+            setTimeout(() => {
+                animateOnScroll();
+                
+                // Animate unit and role items
+                document.querySelectorAll('.unit-item, .role-item').forEach((item, index) => {
+                    setTimeout(() => {
+                        item.classList.add('animate');
+                    }, index * 75);
+                });
+            }, 100);
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Form submission
+        function submitForm(event) {
+            event.preventDefault();
+            alert('Thank you for your interest! Our Australian Student Support Team will contact you within 24 hours.');
+            document.getElementById('interestForm').reset();
+        }
+        
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('animated');
+                }
+            });
+            
+            // Animate unit and role items on course pages
+            document.querySelectorAll('.unit-item, .role-item').forEach(item => {
+                const itemTop = item.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (itemTop < windowHeight - 100 && !item.classList.contains('animate')) {
+                    item.classList.add('animate');
+                }
+            });
+            
+            // Animate mission/vision boxes
+            document.querySelectorAll('.mission-box, .vision-box').forEach(box => {
+                const boxTop = box.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (boxTop < windowHeight - 100 && !box.classList.contains('animate')) {
+                    box.classList.add('animate');
+                }
+            });
+        }
+        
+        // Scroll animations and header effect
+        window.addEventListener('scroll', function() {
+            animateOnScroll();
+            
+            // Header scroll effect
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Try to load logo from images folder
+            const logoElement = document.getElementById('siteLogo');
+            
+            // Add a fallback if logo doesn't exist
+            logoElement.onerror = function() {
+                this.classList.add('fallback');
+                this.innerHTML = 'TP';
+                this.style.background = 'var(--gradient-primary)';
+                this.style.display = 'flex';
+                this.style.alignItems = 'center';
+                this.style.justifyContent = 'center';
+                this.style.color = 'var(--white)';
+                this.style.fontSize = '1.25rem';
+                this.style.fontWeight = '700';
+                this.style.borderRadius = 'var(--radius-md)';
+            };
+            
+            // Try to load logo (update path if needed)
+            logoElement.style.backgroundImage = "url('images/logo.png')";
+            
+            // Set up navigation links
+            document.querySelectorAll('.main-nav a, .footer-col a, .hero-buttons a, .back-button').forEach(link => {
+                if (link.getAttribute('href') && link.getAttribute('href').startsWith('#')) {
+                    link.addEventListener('click', function(e) {
+                        const href = this.getAttribute('href');
+                        if (href === '#home' || href === '#courses' || href === '#about' || href === '#contact' || href === '#students') {
+                            e.preventDefault();
+                            const page = href.substring(1);
+                            navigateTo(page);
+                        }
+                    });
+                }
+            });
+            
+            // Set up course links
+            document.querySelectorAll('.course-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const course = this.getAttribute('onclick').match(/'(\w+)'/)[1];
+                    showCoursePage(course);
+                });
+            });
+            
+            // Back to top button
+            document.getElementById('backToTop').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            
+            // Form submission
+            const form = document.getElementById('interestForm');
+            if (form) {
+                form.addEventListener('submit', submitForm);
+            }
+            
+            // Start on home page
+            navigateTo('home');
+            
+            // Preload images for better performance
+            const imageUrls = [
+                'images/hero-home.jpg',
+                'images/about-hero.jpg',
+                'images/contact-hero.jpg',
+                'images/students-hero.jpg',
+                'images/course-disability.jpg',
+                'images/course-aged-care.jpg',
+                'images/course-ai.jpg',
+                'images/course-community.jpg',
+                'images/consultation.jpg'
+            ];
+            
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+        });
+        
+        // Handle browser resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && navContainer.classList.contains('active')) {
+                navContainer.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Re-trigger animations
+            animateOnScroll();
+        });
+    </script>
+</body>
+</html>
