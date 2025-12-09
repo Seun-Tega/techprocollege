@@ -183,6 +183,45 @@
             font-weight: 400;
         }
         
+        /* NEW: Lovely Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+        
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(13, 71, 161, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(13, 71, 161, 0.8); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .glow {
+            animation: glow 2s ease-in-out infinite;
+        }
+        
         /* Password Protection */
         #passwordProtection {
             position: fixed;
@@ -332,6 +371,13 @@
             transform: translateY(-3px);
         }
         
+        /* NEW: Animated Button */
+        .btn-animated {
+            background: linear-gradient(45deg, var(--primary-red), var(--primary-blue), var(--accent-gold));
+            background-size: 200% 200%;
+            animation: shimmer 3s ease infinite;
+        }
+        
         /* Top Notice Bar */
         .top-notice {
             background-color: var(--primary-red);
@@ -344,6 +390,7 @@
             top: 0;
             z-index: 1001;
             box-shadow: var(--shadow-sm);
+            animation: fadeIn 0.5s ease-out;
         }
         
         /* Header */
@@ -354,6 +401,12 @@
             top: 32px;
             z-index: 1000;
             transition: var(--transition-normal);
+            animation: slideInDown 0.5s ease-out;
+        }
+        
+        @keyframes slideInDown {
+            from { opacity: 0; transform: translateY(-100%); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         header.scrolled {
@@ -569,6 +622,7 @@
             border-radius: 4px;
             box-shadow: var(--shadow-md);
             z-index: 2;
+            animation: fadeIn 1s ease-out;
         }
         
         /* Courses Section */
@@ -599,6 +653,7 @@
             border-top: 4px solid var(--primary-red);
             opacity: 0;
             transform: translateY(20px);
+            animation-delay: calc(var(--index) * 0.1s);
         }
         
         .course-card.animate {
@@ -965,6 +1020,102 @@
             padding-right: 2.5rem;
         }
         
+        /* NEW: Enhanced About Section */
+        .about-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about-content h3 {
+            color: var(--primary-blue);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .about-content h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            height: 1.5rem;
+            width: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+        
+        .about-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--light-blue);
+        }
+        
+        /* NEW: Story Timeline */
+        .story-timeline {
+            position: relative;
+            padding: 2rem 0;
+            margin: 3rem 0;
+        }
+        
+        .story-timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--gradient-primary);
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-left: 70px;
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        
+        .timeline-item.animate {
+            animation: slideInRight 0.6s ease forwards;
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--white);
+            border: 3px solid var(--primary-red);
+            border-radius: 50%;
+            z-index: 2;
+        }
+        
+        .timeline-content {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--accent-gold);
+        }
+        
+        .timeline-content h4 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
         /* Contact Page Styles */
         .contact-info {
             background: var(--light-gray);
@@ -972,6 +1123,7 @@
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-md);
             border-top: 4px solid var(--accent-green);
+            animation: slideInLeft 0.6s ease-out;
         }
         
         .contact-detail {
@@ -981,6 +1133,11 @@
             gap: 1rem;
             padding-bottom: 1.25rem;
             border-bottom: 1px solid #E2E8F0;
+            transition: var(--transition-fast);
+        }
+        
+        .contact-detail:hover {
+            transform: translateX(5px);
         }
         
         .contact-detail:last-child {
@@ -1010,6 +1167,7 @@
             border-radius: var(--radius-lg);
             box-shadow: var(--shadow-lg);
             border-top: 4px solid var(--accent-gold);
+            animation: slideInRight 0.6s ease-out;
         }
         
         /* About Page Styles */
@@ -1028,6 +1186,12 @@
             border-top: 4px solid var(--primary-red);
             opacity: 0;
             transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+        
+        .mission-box:hover, .vision-box:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: var(--shadow-xl);
         }
         
         .mission-box.animate, .vision-box.animate {
@@ -1035,11 +1199,66 @@
         }
         
         .acknowledgement {
-            background: var(--light-green);
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--light-blue) 100%);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            margin: 3rem 0;
+            border-left: 4px solid var(--accent-green);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .acknowledgement::before {
+            content: '🇦🇺';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.1;
+        }
+        
+        .acknowledgement h3 {
+            color: var(--accent-green);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        /* NEW: Values Section */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .value-card {
+            background: var(--white);
             padding: 2rem;
             border-radius: var(--radius-lg);
-            margin: 2.5rem 0;
-            border-left: 4px solid var(--accent-green);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--accent-gold);
+        }
+        
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            color: var(--white);
         }
         
         /* Footer */
@@ -1153,6 +1372,7 @@
             visibility: hidden;
             z-index: 99;
             border: 2px solid white;
+            animation: glow 2s ease-in-out infinite;
         }
         
         .back-to-top.visible {
@@ -1161,7 +1381,7 @@
         }
         
         .back-to-top:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.1);
             background: var(--primary-red);
             box-shadow: var(--shadow-xl);
         }
@@ -1213,7 +1433,7 @@
         }
         
         .quality-badge:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) rotate(3deg);
             box-shadow: var(--shadow-lg);
         }
         
@@ -1254,6 +1474,32 @@
         @keyframes pageSlide {
             from { opacity: 0; transform: translateX(20px); }
             to { opacity: 1; transform: translateX(0); }
+        }
+        
+        /* NEW: Fancy Background Elements */
+        .bg-blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--primary-red));
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            opacity: 0.1;
+            z-index: 0;
+            animation: float 15s ease-in-out infinite;
+        }
+        
+        .bg-blob:nth-child(2) {
+            top: 20%;
+            right: -100px;
+            background: linear-gradient(45deg, var(--accent-gold), var(--accent-green));
+            animation-delay: -5s;
+        }
+        
+        .bg-blob:nth-child(3) {
+            bottom: 20%;
+            left: -100px;
+            background: linear-gradient(45deg, var(--primary-red), var(--accent-gold));
+            animation-delay: -10s;
         }
         
         /* Image responsiveness */
@@ -1311,6 +1557,18 @@
             
             .hero p {
                 font-size: 1.15rem;
+            }
+            
+            .story-timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                padding-left: 50px;
+            }
+            
+            .timeline-marker {
+                left: 10px;
             }
         }
         
@@ -1426,6 +1684,19 @@
                 min-width: calc(50% - 1rem);
                 max-width: none;
             }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-content h3,
+            .about-content p {
+                padding-left: 0;
+            }
+            
+            .about-content h3::before {
+                display: none;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1498,6 +1769,10 @@
             .mission-vision {
                 grid-template-columns: 1fr;
             }
+            
+            .timeline-content {
+                padding: 1rem;
+            }
         }
         
         @media (max-width: 400px) {
@@ -1541,26 +1816,7 @@
             outline: none;
         }
         
-        /* Animation for elements */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .floating {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        /* Enhanced hover effects */
-        .enhanced-hover {
-            transition: all var(--transition-normal);
-        }
-        
-        .enhanced-hover:hover {
-            transform: translateY(-3px);
-        }
-        
-        /* Subtle pulse animation */
+        /* NEW: Subtle pulse animation */
         @keyframes subtlePulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.9; }
@@ -1568,6 +1824,36 @@
         
         .pulse {
             animation: subtlePulse 2s ease-in-out infinite;
+        }
+        
+        /* NEW: Bounce animation */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .bounce {
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        /* NEW: Spin animation */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .spin {
+            animation: spin 10s linear infinite;
+        }
+        
+        /* NEW: Progress bar animation */
+        @keyframes progress {
+            from { width: 0%; }
+            to { width: 100%; }
+        }
+        
+        .progress-bar {
+            animation: progress 2s ease-out forwards;
         }
     </style>
 </head>
@@ -1591,7 +1877,7 @@
             
             <p>Please enter the password to continue:</p>
             <input type="password" class="password-input" id="passwordInput" placeholder="Enter password" aria-label="Enter password to access website">
-            <button class="btn btn-primary" onclick="checkPassword()">Access Website</button>
+            <button class="btn btn-primary btn-animated" onclick="checkPassword()">Access Website</button>
             <p id="passwordError" style="color: var(--primary-red); margin-top: 1rem; display: none; font-weight: 500;">
                 <i class="fas fa-exclamation-circle"></i> Incorrect password. Please try again.
             </p>
@@ -1641,14 +1927,17 @@
         <div id="homePage" class="page-content active">
             <!-- Hero Section with Local Image -->
             <section class="hero" id="home" style="background-image: url('images/hero-home.jpg');">
+                <div class="bg-blob"></div>
+                <div class="bg-blob"></div>
+                <div class="bg-blob"></div>
                 <div class="aus-accent"></div>
                 <div class="container">
                     <div class="hero-content">
                         <h1 class="animate-on-scroll">Empowering Australian Skills.<br>Elevating Futures.</h1>
                         <p class="animate-on-scroll">At TechPro College of Technology, we equip every learner with practical knowledge, confidence, and industry-ready skills to thrive in Australia's evolving job market.</p>
                         <div class="hero-buttons">
-                            <a href="#courses" class="btn btn-primary enhanced-hover" onclick="navigateTo('courses')">
-                                <i class="fas fa-book-open"></i> Explore Our Courses
+                            <a href="#courses" class="btn btn-primary btn-animated enhanced-hover" onclick="navigateTo('courses')">
+                                <i class="fas fa-book-open bounce"></i> Explore Our Courses
                             </a>
                             <a href="#contact" class="btn btn-secondary enhanced-hover" onclick="navigateTo('contact')">
                                 <i class="fas fa-calendar-check"></i> Book Free Consultation
@@ -1697,6 +1986,8 @@
 
             <!-- Courses Preview Section -->
             <section id="courses" class="courses-section">
+                <div class="bg-blob"></div>
+                <div class="bg-blob"></div>
                 <div class="container">
                     <div class="section-title">
                         <h2 class="animate-on-scroll">Our Accredited Courses</h2>
@@ -1786,8 +2077,8 @@
                         <div class="consultation-content animate-on-scroll">
                             <h2>Need guidance for your Australian career path?</h2>
                             <p>Book a personalised 1:1 consultation with our Melbourne-based Student Support Team. Get tailored advice for your study and career goals in Australia.</p>
-                            <a href="#contact-form" class="btn btn-primary enhanced-hover" onclick="navigateTo('contact')">
-                                <i class="fas fa-calendar-alt"></i> Book Free Consultation
+                            <a href="#contact-form" class="btn btn-primary btn-animated enhanced-hover" onclick="navigateTo('contact')">
+                                <i class="fas fa-calendar-alt bounce"></i> Book Free Consultation
                             </a>
                             <div class="aus-certified pulse" style="margin-top: 1.5rem;">
                                 <i class="fas fa-clock"></i>
@@ -1892,8 +2183,8 @@
                         </div>
                         
                         <div style="text-align: center; margin-top: 3rem;" class="animate-on-scroll">
-                            <a href="#contact-form" class="btn btn-success enhanced-hover" onclick="navigateTo('contact')">
-                                <i class="fas fa-info-circle"></i> Enquire About This Course
+                            <a href="#contact-form" class="btn btn-success btn-animated enhanced-hover" onclick="navigateTo('contact')">
+                                <i class="fas fa-info-circle bounce"></i> Enquire About This Course
                             </a>
                         </div>
                     </div>
@@ -2009,8 +2300,8 @@
                         </div>
                         
                         <div style="text-align: center; margin-top: 3rem;" class="animate-on-scroll">
-                            <a href="#contact-form" class="btn btn-success enhanced-hover" onclick="navigateTo('contact')">
-                                <i class="fas fa-info-circle"></i> Enquire About This Course
+                            <a href="#contact-form" class="btn btn-success btn-animated enhanced-hover" onclick="navigateTo('contact')">
+                                <i class="fas fa-info-circle bounce"></i> Enquire About This Course
                             </a>
                         </div>
                     </div>
@@ -2018,9 +2309,11 @@
             </section>
         </div>
 
-        <!-- About Page -->
+        <!-- About Page - IMPROVED SECTION -->
         <div id="aboutPage" class="page-content">
             <section class="hero" id="about" style="background-image: url('images/about-hero.jpg');">
+                <div class="bg-blob"></div>
+                <div class="bg-blob"></div>
                 <div class="aus-accent"></div>
                 <div class="container">
                     <div class="hero-content">
@@ -2031,6 +2324,8 @@
             </section>
 
             <section class="about-section">
+                <div class="bg-blob"></div>
+                <div class="bg-blob"></div>
                 <div class="container">
                     <div class="section-title">
                         <h2 class="animate-on-scroll">Our Story & Vision</h2>
@@ -2038,38 +2333,134 @@
                     </div>
                     
                     <div class="about-content">
-                        <div style="margin-bottom: 2.5rem;" class="animate-on-scroll">
+                        <!-- Introduction Section -->
+                        <div class="animate-on-scroll" style="margin-bottom: 3rem;">
                             <h3>Welcome to TechPro College of Technology</h3>
-                            <p>TechPro College of Technology is a forward-thinking Registered Training Organisation (RTO) based in Melbourne, dedicated to delivering high-quality vocational education with a specialised focus on healthcare and emerging technologies. Our mission is to equip learners with practical, industry-relevant skills that open doors to meaningful careers and long-term growth.</p>
+                            <p>TechPro College of Technology is a forward-thinking Registered Training Organisation (RTO) based in Melbourne, dedicated to delivering high-quality vocational education with a specialised focus on healthcare and emerging technologies.</p>
+                            
+                            <p>Our mission is to equip learners with practical, industry-relevant skills that open doors to meaningful careers and long-term growth. We believe in empowering individuals to reach their full potential through accessible, engaging, and future-focused education.</p>
+                            
                             <p>TechPro College operates nationally through our online learning platform, making our programs accessible to students across Australia. Whether you are beginning your career, upskilling for new opportunities, or transitioning into a high-demand industry, our flexible delivery model ensures you can learn anywhere, anytime.</p>
                         </div>
                         
+                        <!-- Acknowledgement Section -->
                         <div class="acknowledgement animate-on-scroll">
                             <h3><i class="fas fa-landmark"></i> Acknowledgement of Country</h3>
-                            <p>At TechPro College of Technology, we respectfully acknowledge the Traditional Owners of the lands on which we live, learn, and work. We pay our respects to Elders past and present and recognise their enduring connection to culture, community, and country. We remain committed to fostering an inclusive learning environment that honours Indigenous knowledge, values, and contribution.</p>
+                            <p>At TechPro College of Technology, we respectfully acknowledge the Traditional Owners of the lands on which we live, learn, and work.</p>
+                            
+                            <p>We pay our respects to Elders past and present and recognise their enduring connection to culture, community, and country. We remain committed to fostering an inclusive learning environment that honours Indigenous knowledge, values, and contribution to Australian society.</p>
                         </div>
                         
-                        <div style="margin: 2.5rem 0;" class="animate-on-scroll">
-                            <h3>Our Journey</h3>
-                            <p>TechPro College of Technology was founded on a personal journey of growth, resilience, and purpose. Our founder began his career as a disability support worker, providing hands-on support to some of the most vulnerable members of the community. It was in this role that he developed a deep appreciation for compassion, dignity, and the life-changing impact of quality care.</p>
-                            <p>With time, his career expanded into the technology sector, where he gained experience in digital transformation, AI, and business systems across large Australian organisations. This combination of frontline care experience and advanced technical capability created a unique perspective—one that blends humanity with innovation.</p>
-                            <p>Along the way, he also developed significant experience within the Vocational Education and Training (VET) sector, contributing to training, compliance, curriculum development, and student support. This experience shaped his vision for a modern RTO: one that delivers practical skills, embraces new technology, and prepares learners for the real world. TechPro College of Technology was built on that vision.</p>
+                        <!-- Our Journey with Timeline -->
+                        <div style="margin: 3rem 0;" class="animate-on-scroll">
+                            <h3>Our Journey: From Passion to Purpose</h3>
+                            
+                            <div class="story-timeline">
+                                <div class="timeline-item animate-on-scroll">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4><i class="fas fa-hands-helping" style="color: var(--primary-red);"></i> The Beginning</h4>
+                                        <p>TechPro College was founded on a personal journey of growth, resilience, and purpose. Our founder began his career as a disability support worker, providing hands-on support to some of the most vulnerable members of the community. It was in this role that he developed a deep appreciation for compassion, dignity, and the life-changing impact of quality care.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item animate-on-scroll">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4><i class="fas fa-laptop-code" style="color: var(--primary-blue);"></i> Technological Expansion</h4>
+                                        <p>With time, his career expanded into the technology sector, where he gained experience in digital transformation, AI, and business systems across large Australian organisations. This combination of frontline care experience and advanced technical capability created a unique perspective—one that blends humanity with innovation.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item animate-on-scroll">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4><i class="fas fa-graduation-cap" style="color: var(--accent-green);"></i> VET Sector Experience</h4>
+                                        <p>Along the way, he also developed significant experience within the Vocational Education and Training (VET) sector, contributing to training, compliance, curriculum development, and student support. This experience shaped his vision for a modern RTO: one that delivers practical skills, embraces new technology, and prepares learners for the real world.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item animate-on-scroll">
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h4><i class="fas fa-rocket" style="color: var(--accent-gold);"></i> TechPro College Today</h4>
+                                        <p>TechPro College of Technology was built on that vision. Today, we stand as a testament to what happens when compassion meets innovation, when experience guides education, and when dedication transforms lives through learning.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         
+                        <!-- Mission & Vision Boxes -->
                         <div class="mission-vision">
                             <div class="mission-box animate-on-scroll">
-                                <h3><i class="fas fa-bullseye" style="color: var(--primary-red);"></i> Our Mission</h3>
-                                <p>At TechPro College of Technology, our mission is to empower individuals and organisations through transformative, technology-driven education. We are dedicated to delivering practical, future-focused training that bridges the gap between industry needs and workforce capability.</p>
-                                <p>We aim to lead at the forefront of digital transformation and vocational excellence, combining innovative teaching methods with real-world experience to develop confident, skilled, and job-ready graduates.</p>
+                                <div class="value-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <h3>Our Mission</h3>
+                                <p>At TechPro College of Technology, our mission is to empower individuals and organisations through transformative, technology-driven education.</p>
+                                
+                                <p>We are dedicated to delivering practical, future-focused training that bridges the gap between industry needs and workforce capability. We aim to lead at the forefront of digital transformation and vocational excellence.</p>
+                                
                                 <p>Our commitment is to foster a culture of continuous learning, inclusivity, and professional growth, where every learner is supported to reach their full potential and contribute meaningfully to their community and industry.</p>
                             </div>
                             
                             <div class="vision-box animate-on-scroll">
-                                <h3><i class="fas fa-eye" style="color: var(--primary-blue);"></i> Our Vision</h3>
+                                <div class="value-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h3>Our Vision</h3>
                                 <p>At TechPro College of Technology, our vision is to become a leading force in vocational and technology education, recognised nationwide for producing skilled, innovative, and industry-ready professionals.</p>
-                                <p>We aspire to elevate the standard of training delivery in Australia, positioning TechPro Institute as the preferred choice for learners, trainers, and employers seeking excellence in education and professional development.</p>
+                                
+                                <p>We aspire to elevate the standard of training delivery in Australia, positioning TechPro College as the preferred choice for learners, trainers, and employers seeking excellence in education and professional development.</p>
+                                
                                 <p>By combining cutting-edge technology, expert instruction, and a commitment to continuous improvement, we aim to shape the future of learning—where education is practical, engaging, and transformative for individuals and industries alike.</p>
                             </div>
+                        </div>
+                        
+                        <!-- Core Values -->
+                        <div style="margin: 3rem 0;" class="animate-on-scroll">
+                            <h3>Our Core Values</h3>
+                            <div class="values-grid">
+                                <div class="value-card animate-on-scroll">
+                                    <div class="value-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <h4>Excellence</h4>
+                                    <p>We strive for the highest standards in everything we do, from course design to student support.</p>
+                                </div>
+                                
+                                <div class="value-card animate-on-scroll">
+                                    <div class="value-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h4>Inclusion</h4>
+                                    <p>We create welcoming learning environments that respect diversity and promote equal opportunity.</p>
+                                </div>
+                                
+                                <div class="value-card animate-on-scroll">
+                                    <div class="value-icon">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <h4>Innovation</h4>
+                                    <p>We embrace new technologies and teaching methods to enhance learning outcomes.</p>
+                                </div>
+                                
+                                <div class="value-card animate-on-scroll">
+                                    <div class="value-icon">
+                                        <i class="fas fa-handshake"></i>
+                                    </div>
+                                    <h4>Integrity</h4>
+                                    <p>We operate with honesty, transparency, and ethical practices in all our dealings.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Final Statement -->
+                        <div class="acknowledgement animate-on-scroll" style="background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-gold) 100%);">
+                            <h3><i class="fas fa-star" style="color: var(--accent-gold);"></i> Join Our Learning Community</h3>
+                            <p>At TechPro College, we're more than just an education provider - we're a community dedicated to helping you succeed. Our team of experienced educators, industry professionals, and support staff are here to guide you every step of the way.</p>
+                            
+                            <p>Whether you're starting your first qualification or advancing your career, we provide the tools, knowledge, and support you need to achieve your goals in Australia's dynamic job market.</p>
                         </div>
                     </div>
                 </div>
@@ -2079,6 +2470,7 @@
         <!-- Contact Page -->
         <div id="contactPage" class="page-content">
             <section class="hero" id="contact" style="background-image: url('images/contact-hero.jpg');">
+                <div class="bg-blob"></div>
                 <div class="aus-accent"></div>
                 <div class="container">
                     <div class="hero-content">
@@ -2134,24 +2526,31 @@
                             <h3>Submit Expression of Interest</h3>
                             <p>Select course(s) of interest - multiple course selection possible.</p>
                             
-                            <form id="interestForm" onsubmit="submitForm(event)">
+                            <!-- UPDATED FORM: Directs to contact@techprocollege.com.au -->
+                            <form id="interestForm" action="https://formsubmit.co/contact@techprocollege.com.au" method="POST">
+                                <!-- FormSubmit Configuration -->
+                                <input type="hidden" name="_subject" value="New Expression of Interest - TechPro College">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="hidden" name="_next" value="#">
+                                <input type="hidden" name="_captcha" value="false">
+                                
                                 <div class="form-group">
                                     <label>Courses of Interest:</label>
                                     <div class="checkbox-group">
                                         <label class="checkbox-label">
-                                            <input type="checkbox" name="course" value="disability">
+                                            <input type="checkbox" name="course" value="CHC33021 – Certificate III in Individual Support (Disability)">
                                             CHC33021 – Certificate III in Individual Support (Disability)
                                         </label>
                                         <label class="checkbox-label">
-                                            <input type="checkbox" name="course" value="ageing">
+                                            <input type="checkbox" name="course" value="CHC33021 – Certificate III in Individual Support (Ageing)">
                                             CHC33021 – Certificate III in Individual Support (Ageing)
                                         </label>
                                         <label class="checkbox-label">
-                                            <input type="checkbox" name="course" value="ai">
+                                            <input type="checkbox" name="course" value="11287NAT – Diploma of Artificial Intelligence (AI)">
                                             11287NAT – Diploma of Artificial Intelligence (AI)
                                         </label>
                                         <label class="checkbox-label">
-                                            <input type="checkbox" name="course" value="community">
+                                            <input type="checkbox" name="course" value="CHC52021 – Diploma of Community Services">
                                             CHC52021 – Diploma of Community Services
                                         </label>
                                     </div>
@@ -2159,37 +2558,37 @@
                                 
                                 <div class="form-group">
                                     <label for="firstName">First Name (required)</label>
-                                    <input type="text" id="firstName" class="form-control" required>
+                                    <input type="text" id="firstName" name="firstName" class="form-control" required>
                                 </div>
                                 
                                 <div class="form-group">
                                     <label for="lastName">Last Name (required)</label>
-                                    <input type="text" id="lastName" class="form-control" required>
+                                    <input type="text" id="lastName" name="lastName" class="form-control" required>
                                 </div>
                                 
                                 <div class="form-group">
                                     <label for="suburb">Suburb (required)</label>
-                                    <input type="text" id="suburb" class="form-control" required>
+                                    <input type="text" id="suburb" name="suburb" class="form-control" required>
                                 </div>
                                 
                                 <div class="form-group">
                                     <label for="mobile">Mobile No (required)</label>
-                                    <input type="tel" id="mobile" class="form-control" required>
+                                    <input type="tel" id="mobile" name="mobile" class="form-control" required>
                                 </div>
                                 
                                 <div class="form-group">
                                     <label for="email">Your Email (required)</label>
-                                    <input type="email" id="email" class="form-control" required>
+                                    <input type="email" id="email" name="email" class="form-control" required>
                                 </div>
                                 
                                 <div class="form-group">
                                     <label for="emergencyContact">Emergency Contact No: (required)</label>
-                                    <input type="tel" id="emergencyContact" class="form-control" required>
+                                    <input type="tel" id="emergencyContact" name="emergencyContact" class="form-control" required>
                                 </div>
                                 
                                 <div class="form-group">
                                     <label for="visaStatus">Visa Status</label>
-                                    <select id="visaStatus" class="form-control">
+                                    <select id="visaStatus" name="visaStatus" class="form-control">
                                         <option value="">Select Visa Status</option>
                                         <option value="student">Student</option>
                                         <option value="other">Others</option>
@@ -2198,12 +2597,16 @@
                                 
                                 <div class="form-group">
                                     <label for="qualification">Highest Qualification</label>
-                                    <input type="text" id="qualification" class="form-control">
+                                    <input type="text" id="qualification" name="qualification" class="form-control">
                                 </div>
                                 
-                                <button type="submit" class="btn btn-primary enhanced-hover" style="width: 100%;">
-                                    <i class="fas fa-paper-plane"></i> Submit Expression of Interest
+                                <button type="submit" class="btn btn-primary btn-animated enhanced-hover" style="width: 100%;">
+                                    <i class="fas fa-paper-plane bounce"></i> Submit Expression of Interest
                                 </button>
+                                
+                                <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--medium-gray); text-align: center;">
+                                    Your information will be sent directly to contact@techprocollege.com.au
+                                </p>
                             </form>
                         </div>
                     </div>
@@ -2421,9 +2824,17 @@
                     
                     // Animate course cards
                     document.querySelectorAll('.course-card').forEach((card, index) => {
+                        card.style.setProperty('--index', index);
                         setTimeout(() => {
                             card.classList.add('animate');
                         }, index * 150);
+                    });
+                    
+                    // Animate timeline items
+                    document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('animate');
+                        }, index * 200);
                     });
                 }, 100);
             } else {
@@ -2539,6 +2950,7 @@
                 // Animate items on the page
                 if (page === 'courses' || page === 'home') {
                     document.querySelectorAll('.course-card').forEach((card, index) => {
+                        card.style.setProperty('--index', index);
                         setTimeout(() => {
                             card.classList.add('animate');
                         }, index * 150);
@@ -2546,10 +2958,17 @@
                 }
                 
                 if (page === 'about') {
-                    document.querySelectorAll('.mission-box, .vision-box').forEach((box, index) => {
+                    document.querySelectorAll('.mission-box, .vision-box, .value-card').forEach((box, index) => {
                         setTimeout(() => {
                             box.classList.add('animate');
                         }, index * 150);
+                    });
+                    
+                    // Animate timeline items
+                    document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('animate');
+                        }, index * 200);
                     });
                 }
             }, 100);
@@ -2609,11 +3028,19 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         
-        // Form submission
+        // Form submission - Updated for FormSubmit
         function submitForm(event) {
             event.preventDefault();
-            alert('Thank you for your interest! Our Australian Student Support Team will contact you within 24 hours.');
+            
+            // Show success message
+            alert('Thank you for your interest! Your expression of interest has been submitted. Our Australian Student Support Team will contact you within 24 hours.');
+            
+            // Reset form
             document.getElementById('interestForm').reset();
+            
+            // Optional: You can add AJAX submission here if needed
+            // For now, the form will use FormSubmit.co's service
+            return true;
         }
         
         // Animation on scroll
@@ -2640,12 +3067,22 @@
             });
             
             // Animate mission/vision boxes
-            document.querySelectorAll('.mission-box, .vision-box').forEach(box => {
+            document.querySelectorAll('.mission-box, .vision-box, .value-card').forEach(box => {
                 const boxTop = box.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
                 
                 if (boxTop < windowHeight - 100 && !box.classList.contains('animate')) {
                     box.classList.add('animate');
+                }
+            });
+            
+            // Animate timeline items
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                const itemTop = item.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (itemTop < windowHeight - 100 && !item.classList.contains('animate')) {
+                    item.classList.add('animate');
                 }
             });
         }
